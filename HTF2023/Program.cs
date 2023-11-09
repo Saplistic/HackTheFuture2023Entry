@@ -21,15 +21,10 @@ namespace HTF2023
             await client.GetAsync("/api/path/a/medium/start");
             await postNavigatieLianen("/api/path/a/medium/sample");
             await postNavigatieLianen("/api/path/a/medium/puzzle");
-
-
-
         }
 
         public static async Task postHieroglief(string endPoint)
         {
-            await client.GetAsync(endPoint);
-
             var response = await client.GetAsync(endPoint);
             string strResponse = await response.Content.ReadAsStringAsync();
 
